@@ -1,0 +1,20 @@
+<%- include("header") -%>
+
+  <div class="box" id="heading">
+    <h1> Lists </h1>
+  </div>
+
+  <div class="box">
+
+
+  <%  itemList.forEach(function(item){ %>
+        <form action="/about/delete" method="post">
+            <div class="item">
+                <button type="submit" class="aboutDelete" name="aboutDelete" value="<%=item.name%>"><i class="fa fa-trash-o"></i></button>
+                <p><a href="/<%=item.name%>"><%=item.name%></a></p>
+            </div>
+        </form>
+  <%  }) %>
+  </div>
+
+<%- include("footer") -%>
